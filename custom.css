@@ -44,6 +44,10 @@ pre>code {
     position: relative;
 }
 
+body{
+    background-attachment: fixed !important;
+}
+
 
 /*#################################
 ###            NAVBAR           ###
@@ -104,6 +108,11 @@ pre>code {
     top: 50px;
     z-index: 5;
     overflow: auto;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .dropdown-content .wrapper a {
@@ -143,6 +152,27 @@ pre>code {
 
 .scrollTop:focus {
     outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .scrollTop {
+        position: fixed;
+        bottom: 10px;
+        right: 2px;
+        z-index: 50;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: white;
+    }
+    .scrollText {
+        display: none;
+    }
+
+    .dropdown-content {
+   
+        min-width: 100vw;
+        overflow: auto;
+    }
 }
 
 @media screen and (max-width: 812px) {
@@ -192,7 +222,7 @@ pre>code {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .scrollTop {
         position: fixed;
         bottom: 10px;
@@ -207,14 +237,14 @@ pre>code {
     }
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (min-width: 1920px) {
     .scrollText {
         display: block;
     }
     .scrollTop {
         position: fixed;
         bottom: 120px;
-        right: 17px;
+        right: 20px;
         z-index: 50;
         background-color: transparent;
         border: none;
@@ -222,17 +252,3 @@ pre>code {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .scrollTop {
-        position: fixed;
-        bottom: 10px;
-        right: 7px;
-        z-index: 50;
-        background-color: rgba(0, 0, 0, 0.1);
-        border: none;
-        color: white;
-    }
-    .scrollText {
-        display: none;
-    }
-}

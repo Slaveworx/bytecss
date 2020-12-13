@@ -4114,6 +4114,7 @@ html {
 .left.text,
 .right.text {
     -webkit-background-clip: text !important;
+    background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
 }
 
